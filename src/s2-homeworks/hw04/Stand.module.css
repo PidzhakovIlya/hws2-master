@@ -2,11 +2,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 90px;
+    padding: 0 70px;
 }
 
 .inputs {
     display: flex;
     flex-direction: column;
+    align-self: start;
     gap: 48px;
 }
 
