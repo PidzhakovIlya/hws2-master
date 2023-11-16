@@ -2,7 +2,6 @@ import React, {MouseEvent, useState} from 'react'
 import SuperButton from '../hw04/common/c2-SuperButton/SuperButton'
 import {restoreState} from '../hw06/localStorage/localStorage'
 import s from './Clock.module.css'
-import {Simulate} from "react-dom/test-utils";
 
 function Clock() {
     const [timerId, setTimerId] = useState<number | undefined>(undefined)
