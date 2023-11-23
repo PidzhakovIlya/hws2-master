@@ -34,9 +34,13 @@ function Clock() {
         setShow(!e.bubbles)
     }
 
-    const stringTime = `${date.getHours() < 10 ? '0' + date.getHours() : date.getHours()}
-    : ${date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()}
-        :${date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds()}` // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
+    // const stringTime = `${date.getHours() < 10 ? '0' + date.getHours() : date.getHours()}: ${date.getMinutes() < 10 ? '0' + date.getMinutes() :date.getMinutes()} :${date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds()}` // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
+
+    const stringTime =new Intl.DateTimeFormat("ru",  {
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric"
+    })
 
     const stringDate = new Intl.DateTimeFormat("ru", {calendar: 'date'}) // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
 
@@ -54,7 +58,7 @@ function Clock() {
             >
                 <span id={'hw9-day'}>{stringDay.format(date)}</span>,{' '}
                 <span id={'hw9-time'}>
-                    <strong>{stringTime}</strong>
+                    <strong>{stringTime.format(date)}</strong>
                 </span>
             </div>
 
