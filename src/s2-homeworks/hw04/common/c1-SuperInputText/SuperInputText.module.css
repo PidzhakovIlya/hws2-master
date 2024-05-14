@@ -2,7 +2,8 @@
 }
 
 .input {
-    width: 372px;
+    max-width: 372px;
+    width: 100%;
     height: 36px;
     border-radius: 5px;
     border: 1px solid #D1D1D1;
