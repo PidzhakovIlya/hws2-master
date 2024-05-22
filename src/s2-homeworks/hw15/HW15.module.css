@@ -3,7 +3,12 @@
 }
 
 .developer {
-
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
 }
 
 .techHeader {
@@ -23,5 +28,11 @@
 }
 
 .loading {
+    position: absolute;
+    top: 50%;
+    right: 50%;
 
 }
+
+
+
